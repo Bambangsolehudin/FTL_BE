@@ -22,6 +22,7 @@ app.post(
     body('unit').notEmpty().withMessage('Unit harus diisi'),
     body('ruangMeeting').notEmpty().withMessage('Ruang Meeting harus diisi'),
     body('tanggalRapat').notEmpty().withMessage('Tanggal Rapat harus diisi'),
+    body('kapasitas').notEmpty().withMessage('kapasitas harus diisi'),
     body('waktuMulai').isIn(waktuOptions).withMessage('Waktu Mulai tidak valid'),
     body('waktuSelesai').isIn(waktuOptions).withMessage('Waktu Selesai tidak valid'),
     body('jumlahPeserta').isInt({ min: 1 }).withMessage('Jumlah Peserta harus angka positif'),
